@@ -16,6 +16,9 @@ class D6FD010A32:
     TIMEOUT = 1
     ADDRESS_MIN = 1
     ADDRESS_MAX = 32
+    TOTAL_REGISTER_COUNT = 14
+
+    FUNC_READ_HOLDING_REGISTERS = 3
 
     def __init__(self, com_port:str, slave_address:int, baudrate:int, samping_period:int=1):
         self.com_port = com_port
@@ -96,7 +99,7 @@ class D6FD010A32:
     def _read_sensor_data(self):
         while True:
             try:
-                raw_data = self.__instrument.read_registers(self.slave_address - 1, 14, 3)
+                raw_data = self.__instrument.read_registers(self.slave_address - 1, self.TOTAL_REGISTER_COUNT, self.FUNC_READ_HOLDING_REGISTERS)
 
                 if self.__data.full():
                     self.__data.get()
