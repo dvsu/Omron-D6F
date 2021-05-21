@@ -36,7 +36,7 @@ while True:
 
 ### Output data format  
 
-```json
+```none
 {
     "sensor_data": {
         "ins_velocity_x": <class 'float'>, // instantaneous velocity (x-axis)
