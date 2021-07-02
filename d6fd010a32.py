@@ -123,7 +123,7 @@ class D6FD010A32:
             # type check
             if type(self.com_port) is not str:
                 raise TypeError(
-                    f"Argument 'com_port' has incompatible type '{type(self.baudrate).__name__}'; expected 'str'")
+                    f"Argument 'com_port' has incompatible type '{type(self.com_port).__name__}'; expected 'str'")
 
             # port check
             if not path.exists(self.com_port):
@@ -142,14 +142,14 @@ class D6FD010A32:
     def _baudrate_check(self) -> bool:
         try:
             # type check
-            if type(self.slave_address) is not int:
+            if type(self.baudrate) is not int:
                 raise TypeError(
                     f"Argument 'baudrate' has incompatible type '{type(self.baudrate).__name__}'; expected 'int'")
 
             # value check
-            if self.baudrate != self.BAUDRATE_38400 and self.baudrate != self.BAUDRATE_9600:
+            if self.baudrate != BaudRate.BPS9600 and self.baudrate != BaudRate.BAUDRATE_9600:
                 raise ValueError(
-                    f"Value of argument 'baudrate' is invalid. Valid baudrate are {self.BAUDRATE_9600} and {self.BAUDRATE_38400}")
+                    f"Value of argument 'baudrate' is invalid. Valid baudrate are {BaudRate.BPS9600} and {BaudRate.BPS38400}")
 
             return True
 
