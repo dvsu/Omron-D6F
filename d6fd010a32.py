@@ -219,7 +219,7 @@ class D6FD010A32:
                         "velocity_unit": "m/s",
                         "angle_unit": "degrees"
                     },
-                    "timestamp": int(datetime.utcnow().timestamp())
+                    "timestamp": int(datetime.now().timestamp())
                 })
 
             except KeyboardInterrupt:
