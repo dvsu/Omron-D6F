@@ -147,7 +147,7 @@ class D6FD010A32:
                     f"Argument 'baudrate' has incompatible type '{type(self.baudrate).__name__}'; expected 'int'")
 
             # value check
-            if self.baudrate != BaudRate.BPS9600 and self.baudrate != BaudRate.BAUDRATE_9600:
+            if self.baudrate != BaudRate.BPS9600 and self.baudrate != BaudRate.BPS38400:
                 raise ValueError(
                     f"Value of argument 'baudrate' is invalid. Valid baudrate are {BaudRate.BPS9600} and {BaudRate.BPS38400}")
 
