@@ -4,51 +4,85 @@ import threading
 import minimalmodbus
 from os import path
 from time import sleep
-from typing import Final
+# from typing import Final
 from queue import Queue
 from datetime import datetime
 
 
 class BaudRate:
 
-    BPS38400: Final[int] = 38400
-    BPS9600: Final[int] = 9600
+    # BPS38400: Final[int] = 38400
+    # BPS9600: Final[int] = 9600
+    BPS38400 = 38400
+    BPS9600 = 9600
 
 
 class SlaveAddress:
 
-    ADDRESS1: Final[int] = 1
-    ADDRESS2: Final[int] = 2
-    ADDRESS3: Final[int] = 3
-    ADDRESS4: Final[int] = 4
-    ADDRESS5: Final[int] = 5
-    ADDRESS6: Final[int] = 6
-    ADDRESS7: Final[int] = 7
-    ADDRESS8: Final[int] = 8
-    ADDRESS9: Final[int] = 9
-    ADDRESS10: Final[int] = 10
-    ADDRESS11: Final[int] = 11
-    ADDRESS12: Final[int] = 12
-    ADDRESS13: Final[int] = 13
-    ADDRESS14: Final[int] = 14
-    ADDRESS15: Final[int] = 15
-    ADDRESS16: Final[int] = 16
-    ADDRESS17: Final[int] = 17
-    ADDRESS18: Final[int] = 18
-    ADDRESS19: Final[int] = 19
-    ADDRESS20: Final[int] = 20
-    ADDRESS21: Final[int] = 21
-    ADDRESS22: Final[int] = 22
-    ADDRESS23: Final[int] = 23
-    ADDRESS24: Final[int] = 24
-    ADDRESS25: Final[int] = 25
-    ADDRESS26: Final[int] = 26
-    ADDRESS27: Final[int] = 27
-    ADDRESS28: Final[int] = 28
-    ADDRESS29: Final[int] = 29
-    ADDRESS30: Final[int] = 30
-    ADDRESS31: Final[int] = 31
-    ADDRESS32: Final[int] = 32
+    # ADDRESS1: Final[int] = 1
+    # ADDRESS2: Final[int] = 2
+    # ADDRESS3: Final[int] = 3
+    # ADDRESS4: Final[int] = 4
+    # ADDRESS5: Final[int] = 5
+    # ADDRESS6: Final[int] = 6
+    # ADDRESS7: Final[int] = 7
+    # ADDRESS8: Final[int] = 8
+    # ADDRESS9: Final[int] = 9
+    # ADDRESS10: Final[int] = 10
+    # ADDRESS11: Final[int] = 11
+    # ADDRESS12: Final[int] = 12
+    # ADDRESS13: Final[int] = 13
+    # ADDRESS14: Final[int] = 14
+    # ADDRESS15: Final[int] = 15
+    # ADDRESS16: Final[int] = 16
+    # ADDRESS17: Final[int] = 17
+    # ADDRESS18: Final[int] = 18
+    # ADDRESS19: Final[int] = 19
+    # ADDRESS20: Final[int] = 20
+    # ADDRESS21: Final[int] = 21
+    # ADDRESS22: Final[int] = 22
+    # ADDRESS23: Final[int] = 23
+    # ADDRESS24: Final[int] = 24
+    # ADDRESS25: Final[int] = 25
+    # ADDRESS26: Final[int] = 26
+    # ADDRESS27: Final[int] = 27
+    # ADDRESS28: Final[int] = 28
+    # ADDRESS29: Final[int] = 29
+    # ADDRESS30: Final[int] = 30
+    # ADDRESS31: Final[int] = 31
+    # ADDRESS32: Final[int] = 32
+    ADDRESS1 = 1
+    ADDRESS2 = 2
+    ADDRESS3 = 3
+    ADDRESS4 = 4
+    ADDRESS5 = 5
+    ADDRESS6 = 6
+    ADDRESS7 = 7
+    ADDRESS8 = 8
+    ADDRESS9 = 9
+    ADDRESS10 = 10
+    ADDRESS11 = 11
+    ADDRESS12 = 12
+    ADDRESS13 = 13
+    ADDRESS14 = 14
+    ADDRESS15 = 15
+    ADDRESS16 = 16
+    ADDRESS17 = 17
+    ADDRESS18 = 18
+    ADDRESS19 = 19
+    ADDRESS20 = 20
+    ADDRESS21 = 21
+    ADDRESS22 = 22
+    ADDRESS23 = 23
+    ADDRESS24 = 24
+    ADDRESS25 = 25
+    ADDRESS26 = 26
+    ADDRESS27 = 27
+    ADDRESS28 = 28
+    ADDRESS29 = 29
+    ADDRESS30 = 30
+    ADDRESS31 = 31
+    ADDRESS32 = 32
 
 
 class D6FD010A32:
